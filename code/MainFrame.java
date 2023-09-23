@@ -10,7 +10,8 @@ public class MainFrame extends JFrame {
     public JButton bStart;
     public JButton bToInfo;
     public JLabel lInfo;
-    public JButton bCloseInfo;
+    public JButton bCloseInfo1;
+    public JButton bCloseInfo2;
 
     public JLabel lBackground;
 
@@ -52,18 +53,28 @@ public class MainFrame extends JFrame {
         lInfo = new JLabel();
         lInfo.setIcon(PhotoElement.gameRule);
         
-        bCloseInfo = new JButton();
-        bCloseInfo.setIcon(PhotoElement.closeInfo);
-        bCloseInfo.setBounds(630, 550, 140, 47);
-        bCloseInfo.setOpaque(false);
-        bCloseInfo.setContentAreaFilled(false);
-        bCloseInfo.setBorderPainted(false);
+        bCloseInfo1 = new JButton();
+        bCloseInfo2 = new JButton();
+        
+        bCloseInfo1.setIcon(PhotoElement.closeInfo);
+        bCloseInfo1.setBounds(630, 550, 140, 47);   // at bottom right
+        bCloseInfo1.setOpaque(false);
+        bCloseInfo1.setContentAreaFilled(false);
+        bCloseInfo1.setBorderPainted(false);
+
+        bCloseInfo2.setBounds(571, 167, 64, 29);    // at X button on screen (hidden behide picture)
+        bCloseInfo2.setOpaque(false);
+        bCloseInfo2.setContentAreaFilled(false);
+        bCloseInfo2.setBorderPainted(false);
 
         lInfo.setVisible(false);
-        bCloseInfo.setVisible(false);
+        bCloseInfo1.setVisible(false);
+        bCloseInfo2.setVisible(false);
 
-        add(lInfo);
-        add(bCloseInfo);
+        // swap this 2 line if want to hide/show
+        add(bCloseInfo1);   //this on top: show button over picture
+        add(lInfo);         //this on top: hide button behide picture
+        add(bCloseInfo2);
     }
 
     private void initBackground() {
