@@ -92,7 +92,8 @@ public class App implements ActionListener {
         pGame.bGame4.addActionListener(this);
         f.bStart.addActionListener(this);
         f.bToInfo.addActionListener(this);
-        f.bCloseInfo.addActionListener(this);
+        f.bCloseInfo1.addActionListener(this);
+        f.bCloseInfo2.addActionListener(this);
         pSelect.bSel1.addActionListener(this);
         pSelect.bSel2.addActionListener(this);
         pSelect.bSel3.addActionListener(this);
@@ -212,12 +213,14 @@ public class App implements ActionListener {
             f.bStart.setVisible(false);
             f.bToInfo.setVisible(false);
             f.lInfo.setVisible(true);
-            f.bCloseInfo.setVisible(true);
-        } else if (src == f.bCloseInfo) {
+            f.bCloseInfo1.setVisible(true);
+            f.bCloseInfo2.setVisible(true);
+        } else if (src == f.bCloseInfo1 || src == f.bCloseInfo2) {
             f.bStart.setVisible(true);
             f.bToInfo.setVisible(true);
             f.lInfo.setVisible(false);
-            f.bCloseInfo.setVisible(false);
+            f.bCloseInfo1.setVisible(false);
+            f.bCloseInfo2.setVisible(false);
         } else if (src == f.bStart) {
             f.lBackground.setIcon(PhotoElement.bg);
             f.bStart.setVisible(false);
